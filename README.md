@@ -42,4 +42,18 @@ docker run epa_test
 
 ![image](https://user-images.githubusercontent.com/71491954/157337009-d15a99fb-6a28-42f7-97f0-5369c12978bf.png)
 
+# Continuous Deployment to the OCI Cloud
 
+This is run within the Cloud from Cloud Shell. It can be run from Jenkins with oci_cli installed and configured to talk to the Cloud.
+
+docker pull container-registry.oracle.com/database/ords:latest
+
+mkdir ords_volume ; echo 'CONN_STRING=user/password@hostname:port/service_name' > ords_volume/conn_string.txt
+
+docker run  --rm --name ords -v `pwd`/ords_volume/:/opt/oracle/variables -p 8181:8181 container-registry.oracle.com/database/ords:latest
+
+docker run -d --name DBCONT1 -e INIT_SGA_SIZE=1024 -e INIT_PGA_SIZE=1024 container-registry.oracle.com/database/enterprise:21.3.0.0
+
+Docker logs DBCONT1
+
+http://localhost:8181/ords
