@@ -6,6 +6,11 @@ Development is local and the scripts are then packed in a Dockerfile for Distrib
 
 NOTE : Some aspects of this code are for demonstration purposes. This is not intended to be a complete Application so use at your discretion.
 
+# Running Locally using poetry
+
+poetry run python how_long/app.py
+poetry run pytest
+
 # Build the Docker File
 
 docker build --target development --tag epa_test .
