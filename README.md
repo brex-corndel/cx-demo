@@ -9,7 +9,9 @@ NOTE : Some aspects of this code are for demonstration purposes. This is not int
 # Build the Docker File
 
 docker build --target development --tag epa_test .
+
 docker build --target test --tag epa_test .
+
 docker build --target production --tag epa_test .
 
 docker run epa_test
