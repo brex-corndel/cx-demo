@@ -9,6 +9,7 @@ NOTE : Some aspects of this code are for demonstration purposes. This is not int
 # Running Locally using poetry
 
 poetry run python how_long/app.py
+
 poetry run pytest
 
 # Build the Docker File
