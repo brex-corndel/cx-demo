@@ -40,5 +40,6 @@ docker run epa_test
 
 # CI with Jenkins - github to Dockerhub
 
-![image](https://user-images.githubusercontent.com/71491954/157336694-134c17ac-627a-4d6a-8926-0814f39192a7.png)
+![image](https://user-images.githubusercontent.com/71491954/157337009-d15a99fb-6a28-42f7-97f0-5369c12978bf.png)
+
 
