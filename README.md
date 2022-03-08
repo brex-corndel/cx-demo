@@ -12,6 +12,14 @@ poetry run python how_long/app.py
 
 poetry run pytest
 
+# Run the database against localhost. 
+
+To Find the IP to run against for the JDBC string run the following
+
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' MYORADB3
+
+connection = cx_Oracle.connect(user="hr", password="Welcome_1", dsn="172.17.0.2/XEPDB1")
+
 # Build the Docker File
 
 docker build --target development --tag epa_test .
