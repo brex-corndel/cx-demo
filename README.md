@@ -16,3 +16,4 @@ docker build --target production --tag epa_test .
 
 docker run epa_test
 
+![image](https://user-images.githubusercontent.com/71491954/157327087-e7f6088c-b8f9-40fb-995d-0d79a1b65828.png)
