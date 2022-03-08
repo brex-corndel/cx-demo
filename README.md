@@ -10,7 +10,13 @@ NOTE : Some aspects of this code are for demonstration purposes. This is not int
 
 poetry run python how_long/app.py
 
+![image](https://user-images.githubusercontent.com/71491954/157334147-44914b1a-4fa1-437c-85c3-642dde4a40f4.png)
+
+
 poetry run pytest
+
+![image](https://user-images.githubusercontent.com/71491954/157334007-fd6d1eaa-3683-45ec-afdb-87b839f163d7.png)
+
 
 # Run the database against localhost. 
 
