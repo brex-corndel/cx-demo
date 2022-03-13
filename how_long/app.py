@@ -14,10 +14,10 @@ def employees_by_job_id(job_id):
  #   print('Number of rows is', cursor.rowcount)
     return str(cursor.rowcount)
 
-# cx_Oracle.init_oracle_client(lib_dir=r"/Users/jeremybrex/Downloads/instantclient_19_8")
+cx_Oracle.init_oracle_client(lib_dir=r"/Users/jeremybrex/Downloads/instantclient_19_8")
 
 # Establish the database connection
-connection = cx_Oracle.connect(user="hr", password="Welcome_1", dsn="172.17.0.2/XEPDB1")
+connection = cx_Oracle.connect(user="hr", password="Welcome_1", dsn="localhost/XEPDB1")
 
 # Obtain a cursor
 cursor = connection.cursor()
