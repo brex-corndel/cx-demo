@@ -57,3 +57,6 @@ docker run -d --name DBCONT1 -e INIT_SGA_SIZE=1024 -e INIT_PGA_SIZE=1024 contain
 Docker logs DBCONT1
 
 http://localhost:8181/ords
+
+
+testing with ngrok
