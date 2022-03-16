@@ -86,6 +86,32 @@ docker run -d --restart always \
 
 =======
 
-testing with ngrok
+# testing with ngrok
+
 Added ngrok interface to automate build with Jenkins
+Add webhooks (settings | webhooks) to automate the build on localhost jenkins
+
+ngrok http 8181
+
 >>>>>>> bcc2bde261a67119f141f8afbfd7841437ac4ca8
+
+# Publishing on the cloud
+
+docker login https:/uk-london-1.ocir.io
+<tenancy-namespace>/<username>.
+  
+lre0oonvr6z2/oracleidentitycloudservice/xxxx@aexp.com
+
+docker pull j3rry99/test:latest
+docker tag j3rry99/helloworld:latest <region-key>.ocir.io/<tenancy-namespace>/<repo-name>:<tag>
+
+docker tag j3rry99/test:latest lhr.ocir.io/lre0oonvr6z2/epa-repository:latest
+Docker images
+
+docker push <region-key>.ocir.io/<tenancy-namespace>/<repo-name>:<tag>
+
+docker push lhr.ocir.io/lre0oonvr6z2/epa-repository:latest
+
+docker pull lhr.ocir.io/lre0oonvr6z2/epa-repository:latest
+
+Image is now available on the web!!!!
