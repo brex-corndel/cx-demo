@@ -58,6 +58,7 @@ Docker logs DBCONT1
 
 http://localhost:8181/ords
 
+<<<<<<< HEAD
 # Webhooks Relay
 
 This is configured to allow working with Local Jenkins
@@ -83,3 +84,8 @@ docker run -d --restart always \
 
   docker logs webhookrelayd
 
+=======
+
+testing with ngrok
+Added ngrok interface to automate build with Jenkins
+>>>>>>> bcc2bde261a67119f141f8afbfd7841437ac4ca8
