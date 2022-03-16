@@ -1,7 +1,7 @@
 FROM python:latest as base
 LABEL key="Jeremy Brex EPA Project"
 
-RUN pip install cx_Oracle
+# RUN pip install cx_Oracle
 
 # Install Oracle Client
 ENV ORACLE_HOME=/opt/oracle

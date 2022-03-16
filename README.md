@@ -57,3 +57,29 @@ docker run -d --name DBCONT1 -e INIT_SGA_SIZE=1024 -e INIT_PGA_SIZE=1024 contain
 Docker logs DBCONT1
 
 http://localhost:8181/ords
+
+# Webhooks Relay
+
+This is configured to allow working with Local Jenkins
+
+https://my.webhookrelay.com/tokens
+
+# Run the agent locally in Docker
+
+export RELAY_KEY=< from webhooks Relay >
+export RELAY_SECRET=< from  webhooks Relay >
+Export BUCKETS=github-jenkins
+
+docker pull webhookrelay/webhookrelayd
+
+docker run -d --restart always \
+  --name webhookrelayd \
+  --network host \
+  --env RELAY_KEY=$RELAY_KEY \
+  --env BUCKETS=$BUCKETS \
+  --env RELAY_SECRET=$RELAY_SECRET webhookrelay/webhookrelayd
+
+  Check the logs as follows :-
+
+  docker logs webhookrelayd
+
