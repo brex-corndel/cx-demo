@@ -1,5 +1,9 @@
 import cx_Oracle
 from datetime import datetime, date, timedelta
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 def get_employment_duration(hire_date):
    days_employed = date.today() - hire_date
@@ -18,10 +22,11 @@ def employees_by_job_id(job_id):
  #   print('Number of rows is', cursor.rowcount)
     return str(cursor.rowcount)
 
+db_password = os.getenv("DB_PWD")
 cx_Oracle.init_oracle_client(lib_dir=r"/Users/jeremybrex/Downloads/instantclient_19_8")
 
 # Establish the database connection
-connection = cx_Oracle.connect(user="hr", password="Welcome_1", dsn="localhost/XEPDB1")
+connection = cx_Oracle.connect(user="hr", password="{db_password}", dsn="localhost/XEPDB1")
 
 # Obtain a cursor
 cursor = connection.cursor()
@@ -34,4 +39,4 @@ print ("Employees count by Job ID : " + emp_count)
 # Function to use pytest
 hire_date = date(year=2021, month=7, day=29)
 days_employed = get_employment_duration(hire_date)
-print(f"Daysn Employee has been employed : {days_employed}")
+print(f"Days Employee has been employed : {days_employed}")

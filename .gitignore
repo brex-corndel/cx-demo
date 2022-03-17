@@ -1,0 +1,8 @@
+**/logs
+
+### Virtual environment ###
+env/
+.venv/
+
+### Configuration files ###
+.env
