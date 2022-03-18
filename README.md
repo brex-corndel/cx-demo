@@ -115,3 +115,5 @@ docker push lhr.ocir.io/lre0oonvr6z2/epa-repository:latest
 docker pull lhr.ocir.io/lre0oonvr6z2/epa-repository:latest
 
 Image is now available on the web!!!!
+
+  Adding code to fire demo
